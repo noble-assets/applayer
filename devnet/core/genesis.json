@@ -33,7 +33,7 @@
       "accounts": []
     },
     "authority": {
-      "owner": "",
+      "owner": "noble1ppkf20jef5gsez9asj9kaer77f43e8mh3n89r6",
       "pending_owner": ""
     },
     "authz": {
@@ -46,7 +46,28 @@
       },
       "balances": [],
       "supply": [],
-      "denom_metadata": [],
+      "denom_metadata": [
+        {
+          "description": "Circle USD Coin",
+          "denom_units": [
+            {
+              "denom": "uusdc",
+              "exponent": 0,
+              "aliases": [
+                "microusdc"
+              ]
+            },
+            {
+              "denom": "usdc",
+              "exponent": 6
+            }
+          ],
+          "base": "uusdc",
+          "display": "usdc",
+          "name": "Circle USD Coin",
+          "symbol": "USDC"
+        }
+      ],
       "send_enabled": []
     },
     "capability": {
@@ -129,7 +150,9 @@
       "blacklister": null,
       "owner": null,
       "minterControllerList": [],
-      "mintingDenom": null
+      "mintingDenom": {
+        "denom": "uusdc"
+      }
     },
     "florin": {
       "blacklist_state": {
@@ -417,7 +440,7 @@
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
-        "bond_denom": "stake",
+        "bond_denom": "ustake",
         "min_commission_rate": "0.000000000000000000"
       },
       "last_total_power": "0",
