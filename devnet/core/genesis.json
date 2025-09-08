@@ -1,0 +1,497 @@
+{
+  "app_name": "nobled",
+  "app_version": "v10.1.1",
+  "genesis_time": "2025-09-15T12:00:00.000000Z",
+  "chain_id": "duke-1",
+  "initial_height": 1,
+  "app_hash": null,
+  "app_state": {
+    "06-solomachine": null,
+    "07-tendermint": null,
+    "aura": {
+      "blocklist_state": {
+        "owner": "",
+        "pending_owner": "",
+        "blocked_addresses": []
+      },
+      "paused": false,
+      "owner": "",
+      "pending_owner": "",
+      "burners": [],
+      "minters": [],
+      "pausers": [],
+      "blocked_channels": []
+    },
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": []
+    },
+    "authority": {
+      "owner": "",
+      "pending_owner": ""
+    },
+    "authz": {
+      "authorization": []
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": true
+      },
+      "balances": [],
+      "supply": [],
+      "denom_metadata": [],
+      "send_enabled": []
+    },
+    "capability": {
+      "index": "1",
+      "owners": []
+    },
+    "cctp": {
+      "owner": "",
+      "attester_manager": "",
+      "pauser": "",
+      "token_controller": "",
+      "attester_list": [],
+      "per_message_burn_limit_list": [],
+      "burning_and_minting_paused": {
+        "paused": false
+      },
+      "sending_and_receiving_messages_paused": {
+        "paused": false
+      },
+      "max_message_body_size": null,
+      "next_available_nonce": null,
+      "signature_threshold": null,
+      "token_pair_list": [],
+      "used_nonces_list": [],
+      "token_messenger_list": []
+    },
+    "consensus": null,
+    "crisis": {
+      "constant_fee": {
+        "denom": "stake",
+        "amount": "1000"
+      }
+    },
+    "dollar": {
+      "portal": {
+        "owner": "",
+        "paused": false,
+        "peers": {},
+        "bridging_paths": [],
+        "nonce": 0
+      },
+      "vaults": {
+        "positions": [],
+        "rewards": [],
+        "total_flexible_principal": "0",
+        "paused": "NONE",
+        "stats": {
+          "flexible_total_principal": "0",
+          "flexible_total_users": "0",
+          "flexible_total_distributed_rewards_principal": "0",
+          "staked_total_principal": "0",
+          "staked_total_users": "0"
+        },
+        "season_one_ended": false
+      },
+      "paused": false,
+      "index": "1000000000000",
+      "principal": {},
+      "stats": {
+        "total_holders": "0",
+        "total_principal": "0",
+        "total_yield_accrued": "0"
+      },
+      "total_external_yield": {},
+      "yield_recipients": {},
+      "retry_amounts": {}
+    },
+    "evidence": {
+      "evidence": []
+    },
+    "feegrant": {
+      "allowances": []
+    },
+    "fiat-tokenfactory": {
+      "blacklistedList": [],
+      "paused": null,
+      "masterMinter": null,
+      "mintersList": [],
+      "pauser": null,
+      "blacklister": null,
+      "owner": null,
+      "minterControllerList": [],
+      "mintingDenom": null
+    },
+    "florin": {
+      "blacklist_state": {
+        "owner": "",
+        "pending_owner": "",
+        "admins": [],
+        "adversaries": []
+      },
+      "allowed_denoms": [
+        "ueure"
+      ],
+      "owners": {},
+      "pending_owners": {},
+      "systems": [],
+      "admins": [],
+      "mint_allowances": [],
+      "max_mint_allowances": {
+        "ueure": "3000000000000"
+      }
+    },
+    "forwarding": {
+      "allowed_denoms": [
+        "*"
+      ],
+      "num_of_accounts": {},
+      "num_of_forwards": {},
+      "total_forwarded": {}
+    },
+    "genutil": {
+      "gen_txs": []
+    },
+    "globalfee": {
+      "gas_prices": [],
+      "bypass_messages": []
+    },
+    "halo": {
+      "aggregator_state": {
+        "owner": "",
+        "last_round_id": "0",
+        "next_price": "0",
+        "rounds": {}
+      },
+      "entitlements_state": {
+        "owner": "",
+        "paused": false,
+        "public_capabilities": {},
+        "role_capabilities": [
+          {
+            "method": "/halo.v1.MsgBurn",
+            "role": "ROLE_DOMESTIC_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgDeposit",
+            "role": "ROLE_DOMESTIC_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgDepositFor",
+            "role": "ROLE_DOMESTIC_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgWithdraw",
+            "role": "ROLE_DOMESTIC_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgWithdrawTo",
+            "role": "ROLE_DOMESTIC_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "transfer",
+            "role": "ROLE_DOMESTIC_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgBurn",
+            "role": "ROLE_INTERNATIONAL_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgDeposit",
+            "role": "ROLE_INTERNATIONAL_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgDepositFor",
+            "role": "ROLE_INTERNATIONAL_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgWithdraw",
+            "role": "ROLE_INTERNATIONAL_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgWithdrawTo",
+            "role": "ROLE_INTERNATIONAL_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "transfer",
+            "role": "ROLE_INTERNATIONAL_FEEDER",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgBurn",
+            "role": "ROLE_DOMESTIC_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgDeposit",
+            "role": "ROLE_DOMESTIC_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgDepositFor",
+            "role": "ROLE_DOMESTIC_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgWithdraw",
+            "role": "ROLE_DOMESTIC_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgWithdrawTo",
+            "role": "ROLE_DOMESTIC_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "transfer",
+            "role": "ROLE_DOMESTIC_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgBurn",
+            "role": "ROLE_INTERNATIONAL_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgDeposit",
+            "role": "ROLE_INTERNATIONAL_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgDepositFor",
+            "role": "ROLE_INTERNATIONAL_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgWithdraw",
+            "role": "ROLE_INTERNATIONAL_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "/halo.v1.MsgWithdrawTo",
+            "role": "ROLE_INTERNATIONAL_SDYF",
+            "enabled": true
+          },
+          {
+            "method": "transfer",
+            "role": "ROLE_INTERNATIONAL_SDYF",
+            "enabled": true
+          }
+        ],
+        "user_roles": []
+      },
+      "owner": "",
+      "nonces": {}
+    },
+    "hyperlane": {
+      "ism_genesis": {
+        "isms": [],
+        "validator_storage_locations": []
+      },
+      "post_dispatch_genesis": {
+        "igps": [],
+        "igp_gas_configs": [],
+        "merkle_tree_hooks": [],
+        "noop_hooks": []
+      },
+      "mailboxes": [],
+      "messages": [],
+      "ism_sequence": "0",
+      "post_dispatch_sequence": "0",
+      "app_sequence": "0"
+    },
+    "ibc": {
+      "client_genesis": {
+        "clients": [],
+        "clients_consensus": [],
+        "clients_metadata": [],
+        "params": {
+          "allowed_clients": [
+            "*"
+          ]
+        },
+        "create_localhost": false,
+        "next_client_sequence": "0"
+      },
+      "connection_genesis": {
+        "connections": [],
+        "client_connection_paths": [],
+        "next_connection_sequence": "0",
+        "params": {
+          "max_expected_time_per_block": "30000000000"
+        }
+      },
+      "channel_genesis": {
+        "channels": [],
+        "acknowledgements": [],
+        "commitments": [],
+        "receipts": [],
+        "send_sequences": [],
+        "recv_sequences": [],
+        "ack_sequences": [],
+        "next_channel_sequence": "0",
+        "params": {
+          "upgrade_timeout": {
+            "height": {
+              "revision_number": "0",
+              "revision_height": "0"
+            },
+            "timestamp": "600000000000"
+          }
+        }
+      }
+    },
+    "interchainaccounts": {
+      "controller_genesis_state": {
+        "active_channels": [],
+        "interchain_accounts": [],
+        "ports": [],
+        "params": {
+          "controller_enabled": true
+        }
+      },
+      "host_genesis_state": {
+        "active_channels": [],
+        "interchain_accounts": [],
+        "port": "icahost",
+        "params": {
+          "host_enabled": true,
+          "allow_messages": [
+            "*"
+          ]
+        }
+      }
+    },
+    "packetfowardmiddleware": {
+      "in_flight_packets": {}
+    },
+    "params": null,
+    "ratelimit": {
+      "params": {},
+      "rate_limits": [],
+      "whitelisted_address_pairs": [],
+      "blacklisted_denoms": [],
+      "pending_send_packet_sequence_numbers": [],
+      "hour_epoch": {
+        "epoch_number": "0",
+        "duration": "3600s",
+        "epoch_start_time": "0001-01-01T00:00:00Z",
+        "epoch_start_height": "0"
+      }
+    },
+    "runtime": null,
+    "slashing": {
+      "params": {
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600s",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": [],
+      "missed_blocks": []
+    },
+    "staking": {
+      "params": {
+        "unbonding_time": "1814400s",
+        "max_validators": 100,
+        "max_entries": 7,
+        "historical_entries": 10000,
+        "bond_denom": "stake",
+        "min_commission_rate": "0.000000000000000000"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": [],
+      "validators": [],
+      "delegations": [],
+      "unbonding_delegations": [],
+      "redelegations": [],
+      "exported": false
+    },
+    "swap": {
+      "next_pool_id": "0",
+      "pools": {},
+      "paused": {},
+      "stableswap_state": {
+        "pools": {},
+        "pools_total_unbonding_shares": [],
+        "users_total_bonded_shares": [],
+        "users_total_unbonding_shares": [],
+        "bonded_positions": [],
+        "unbonding_positions": []
+      }
+    },
+    "transfer": {
+      "port_id": "transfer",
+      "denom_traces": [],
+      "params": {
+        "send_enabled": true,
+        "receive_enabled": true
+      },
+      "total_escrowed": []
+    },
+    "upgrade": {},
+    "vesting": {},
+    "warp": {
+      "params": {},
+      "tokens": [],
+      "remote_routers": []
+    },
+    "wormhole": {
+      "config": {
+        "chain_id": 0,
+        "guardian_set_index": 0,
+        "gov_chain": 0,
+        "gov_address": null
+      },
+      "wormchain_channel": "",
+      "guardian_sets": {},
+      "sequences": {},
+      "vaa_archive": {}
+    }
+  },
+  "consensus": {
+    "params": {
+      "block": {
+        "max_bytes": "22020096",
+        "max_gas": "-1"
+      },
+      "evidence": {
+        "max_age_num_blocks": "100000",
+        "max_age_duration": "172800000000000",
+        "max_bytes": "1048576"
+      },
+      "validator": {
+        "pub_key_types": [
+          "ed25519"
+        ]
+      },
+      "version": {
+        "app": "0"
+      },
+      "abci": {
+        "vote_extensions_enable_height": "0"
+      }
+    }
+  }
+}
