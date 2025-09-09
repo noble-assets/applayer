@@ -1,7 +1,7 @@
 {
   "app_name": "nobled",
   "app_version": "v10.1.1",
-  "genesis_time": "2025-09-15T12:00:00.000000Z",
+  "genesis_time": "2025-09-15T12:00:00Z",
   "chain_id": "duke-1",
   "initial_height": 1,
   "app_hash": null,
@@ -30,7 +30,15 @@
         "sig_verify_cost_ed25519": "590",
         "sig_verify_cost_secp256k1": "1000"
       },
-      "accounts": []
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "noble1ppkf20jef5gsez9asj9kaer77f43e8mh3n89r6",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        }
+      ]
     },
     "authority": {
       "owner": "noble1ppkf20jef5gsez9asj9kaer77f43e8mh3n89r6",
@@ -74,13 +82,16 @@
             },
             {
               "denom": "usdc",
-              "exponent": 6
+              "exponent": 6,
+              "aliases": []
             }
           ],
           "base": "uusdc",
           "display": "usdc",
           "name": "Circle USD Coin",
-          "symbol": "USDC"
+          "symbol": "USDC",
+          "uri": "",
+          "uri_hash": ""
         }
       ],
       "send_enabled": []
