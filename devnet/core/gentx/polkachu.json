@@ -22,7 +22,10 @@
           "@type": "/cosmos.crypto.ed25519.PubKey",
           "key": "BRAx7lCr9pRZidtGVhOev1hHHxU+9+E9lgNxGjo4Eeo="
         },
-        "value": { "denom": "ustake", "amount": "1000000" }
+        "value": {
+          "denom": "ustake",
+          "amount": "1000000"
+        }
       }
     ],
     "memo": "c7cbb0cb78cf25809f2d780820e3efdd2d4f4b3f@188.40.66.173:26656",
@@ -37,11 +40,20 @@
           "@type": "/cosmos.crypto.secp256k1.PubKey",
           "key": "As1WcJsvf1NQgRlS8a2PHuueKhHlCYrFe3VooMxQdflR"
         },
-        "mode_info": { "single": { "mode": "SIGN_MODE_DIRECT" } },
+        "mode_info": {
+          "single": {
+            "mode": "SIGN_MODE_DIRECT"
+          }
+        },
         "sequence": "0"
       }
     ],
-    "fee": { "amount": [], "gas_limit": "200000", "payer": "", "granter": "" },
+    "fee": {
+      "amount": [],
+      "gas_limit": "200000",
+      "payer": "",
+      "granter": ""
+    },
     "tip": null
   },
   "signatures": [
