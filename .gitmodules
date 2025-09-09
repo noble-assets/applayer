@@ -1,0 +1,3 @@
+[submodule "devnet/core/explorer/ping.pub"]
+	path = devnet/core/explorer/ping.pub
+	url = git@github.com:ping-pub/explorer.git
