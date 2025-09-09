@@ -1,0 +1,48 @@
+{
+  "chain_name": "noble",
+  "api": [
+    {
+      "provider": "Noble Core Team",
+      "address": "https://api.core.devnet.noble.xyz"
+    }
+  ],
+  "grpc": [
+    {
+      "provider": "Noble Core Team",
+      "address": "grpc.core.devnet.noble.xyz"
+    }
+  ],
+  "rpc": [
+    {
+      "provider": "Noble Core Team",
+      "address": "https://rpc.core.devnet.noble.xyz"
+    }
+  ],
+  "sdk_version": "0.50.13",
+  "coin_type": "118",
+  "addr_prefix": "noble",
+  "logo": "/logos/noble.png",
+  "assets": [
+    {
+      "base": "ustake",
+      "symbol": "STAKE",
+      "exponent": "6",
+      "logo": "/logos/noble.png"
+    },
+    {
+      "base": "uusdc",
+      "symbol": "USDC",
+      "exponent": "6",
+      "logo": "/logos/usdc.png"
+    }
+  ],
+  "features": [
+    "dashboard",
+    "staking",
+    "blocks",
+    "transactions",
+    "uptime",
+    "supply",
+    "consensus"
+  ]
+}
