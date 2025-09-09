@@ -44,8 +44,23 @@
         "send_enabled": [],
         "default_send_enabled": true
       },
-      "balances": [],
-      "supply": [],
+      "balances": [
+        {
+          "address": "noble1ppkf20jef5gsez9asj9kaer77f43e8mh3n89r6",
+          "coins": [
+            {
+              "denom": "uusdc",
+              "amount": "1000000000000000"
+            }
+          ]
+        }
+      ],
+      "supply": [
+        {
+          "denom": "uusdc",
+          "amount": "1000000000000000"
+        }
+      ],
       "denom_metadata": [
         {
           "description": "Circle USD Coin",
