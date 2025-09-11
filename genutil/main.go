@@ -64,14 +64,26 @@ func DefaultDevnetGenesisBlock() *core.Genesis {
 func main() {
 	var genesis *core.Genesis
 
+	if len(os.Args) < 2 {
+		fmt.Fprintln(os.Stderr, "usage: genutil <devnet | testnet | mainnet>")
+		os.Exit(2)
+	}
+
 	switch strings.ToLower(os.Args[1]) {
 	case "devnet":
 		genesis = DefaultDevnetGenesisBlock()
+	case "testnet":
+		panic("not implemented")
+	case "mainnet":
+		panic("not implemented")
 	default:
-		panic(fmt.Errorf("invalid chain type: %s", os.Args[1]))
+		panic(fmt.Errorf("unknown chain type: %s", os.Args[1]))
 	}
 
-	bz, _ := genesis.MarshalJSON()
+	bz, err := genesis.MarshalJSON()
+	if err != nil {
+		panic(fmt.Errorf("unable to marshal genesis: %w", err))
+	}
 	fmt.Println(string(bz))
 }
 
