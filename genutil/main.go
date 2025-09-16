@@ -46,9 +46,8 @@ func ChainConfig(chainType ChainType) *params.ChainConfig {
 func DefaultDevnetGenesisBlock() *core.Genesis {
 	return &core.Genesis{
 		Config:     ChainConfig(Devnet),
-		Nonce:      0x1234,
 		GasLimit:   60_000_000,
-		Difficulty: big.NewInt(0x01),
+		Difficulty: big.NewInt(0),
 		Timestamp:  1758542400,
 		Alloc: coretypes.GenesisAlloc{
 			common.HexToAddress("0xFC28736049E1ea4A315bFc4CfC6e09240250dfdf"): coretypes.Account{
