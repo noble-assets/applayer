@@ -124,7 +124,7 @@ func getChainID(chainType ChainType) *big.Int {
 	panic(fmt.Sprintf("unknown chain type: %v", chainType))
 }
 
-func getStorageSlotValue(rawInput interface{}) common.Hash {
+func getStorageSlotValue(rawInput any) common.Hash {
 	var value [32]byte
 
 	switch input := rawInput.(type) {
