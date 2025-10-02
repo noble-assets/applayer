@@ -1,0 +1,13 @@
+{
+  "name": "Noble Applayer Devnet Tokens",
+  "tokens": [
+    {
+      "address": "0x00000000000000000000000000000000011d0b1e",
+      "logoURI": "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/eip155:662532/noble-applayer-devnet-native.png"
+    },
+    {
+      "address": "0x99542A390463f14666dC253A4d4975EF9F6536a7",
+      "logoURI": "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/eip155:662532/erc20/0x99542A390463f14666dC253A4d4975EF9F6536a7.png"
+    }
+  ]
+}
