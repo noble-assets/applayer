@@ -1,0 +1,8 @@
+{
+  "name": "@noble-assets/applayer",
+  "private": true,
+  "dependencies": {
+    "@hyperlane-xyz/core": "9.0.10",
+    "forge-std": "github:foundry-rs/forge-std#v1.11.0"
+  }
+}
