@@ -1,5 +1,9 @@
 [profile.default]
 src = "contracts"
+libs = ["node_modules"]
+remappings = ["@hyperlane/=node_modules/@hyperlane-xyz/core/contracts/"]
+
+[profile.wnoble]
 optimizer = true
 optimizer_runs = 10000
 
