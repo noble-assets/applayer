@@ -30,6 +30,9 @@
         "max": 9,
         "baseFeeUpdateFraction": 5007716
       }
+    },
+    "evolve": {
+      "mintAdmin": "0xfc28736049e1ea4a315bfc4cfc6e09240250dfdf"
     }
   },
   "nonce": "0x0",
