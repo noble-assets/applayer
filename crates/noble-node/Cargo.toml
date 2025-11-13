@@ -1,0 +1,16 @@
+[package]
+name        = "noble-node"
+version     = { workspace = true }
+edition     = { workspace = true }
+description = "Noble Ethereum Node Implementation, built with reth and ev-reth components"
+
+[[bin]]
+name = "noble-node"
+path = "src/main.rs"
+
+[dependencies]
+reth-ethereum  = { workspace = true }
+ev-node        = { workspace = true }
+reth-cli-util  = { workspace = true }
+evolve-ev-reth = { workspace = true }
+noble-evm      = { path = "../noble-evm" }

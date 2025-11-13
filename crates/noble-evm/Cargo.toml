@@ -1,0 +1,21 @@
+[package]
+name        = "noble-evm"
+version     = "0.1.0"
+edition     = "2024"
+description = "Wrappers around ev-reth factory and executor to provide additional functionality"
+
+[dependencies]
+reth-ethereum              = { workspace = true }
+reth-ethereum-forks        = { workspace = true }
+reth-basic-payload-builder = { workspace = true }
+reth-payload-builder       = { workspace = true }
+reth-revm                  = { workspace = true }
+reth-provider              = { workspace = true }
+ev-node                    = { workspace = true }
+ev-revm                    = { workspace = true }
+evolve-ev-reth             = { workspace = true }
+alloy-evm                  = { workspace = true }
+alloy-primitives           = { workspace = true }
+eyre                       = { workspace = true }
+tracing                    = { workspace = true }
+tokio                      = { workspace = true }
