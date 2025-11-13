@@ -23,6 +23,7 @@ use reth_basic_payload_builder::{
 use reth_ethereum::{
     TransactionSigned,
     chainspec::{ChainSpec, ChainSpecProvider},
+    evm::EthEvmConfig,
     node::{
         api::{FullNodeTypes, NodeTypes, payload::PayloadBuilderAttributes},
         builder::{BuilderContext, components::PayloadBuilderBuilder},
@@ -101,16 +102,30 @@ where
 
         config.validate()?;
 
-        // SAFETY: NobleEvmConfig and EvolveEvmConfig have identical memory layouts.
-        // Both are EthEvmConfig<ChainSpec, Factory> where:
-        // - NobleEvmConfig uses NobleEvmFactory (which wraps EvEvmFactory<EthEvmFactory>)
-        // - EvolveEvmConfig uses EvEvmFactory<EthEvmFactory>
-        // Since NobleEvmFactory is #[repr(transparent)], the layouts match.
-        // Therefore, transmuting between them is safe.
-        // This saves us a lot of boilerplate in re-implementing a NoblePayloadBuilder
-        // that uses NobleEvmConfig.
-        let evolve_evm_config: ev_node::executor::EvolveEvmConfig =
-            unsafe { std::mem::transmute(evm_config) };
+        // Safely convert NobleEvmConfig to EvolveEvmConfig by reconstructing it
+        let evolve_evm_config: ev_node::executor::EvolveEvmConfig = {
+            // Extract components from NobleEvmConfig
+            let EthEvmConfig {
+                executor_factory,
+                block_assembler,
+            } = evm_config;
+
+            // Unwrap the NobleEvmFactory to get the inner EvEvmFactory
+            let inner_ev_factory = executor_factory.evm_factory().clone().into_inner();
+
+            // Reconstruct the executor factory with the unwrapped factory
+            let evolve_executor_factory = alloy_evm::eth::EthBlockExecutorFactory::new(
+                *executor_factory.receipt_builder(),
+                executor_factory.spec().clone(),
+                inner_ev_factory,
+            );
+
+            // Build the EvolveEvmConfig
+            EthEvmConfig {
+                executor_factory: evolve_executor_factory,
+                block_assembler,
+            }
+        };
 
         let evolve_builder = Arc::new(EvolvePayloadBuilder::new(
             Arc::new(ctx.provider().clone()),

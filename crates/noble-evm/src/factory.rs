@@ -40,6 +40,10 @@ impl NobleEvmFactory {
     fn install_transfer_precompile(&self, _precompiles: &mut PrecompilesMap) {
         // TODO: Once we have the transfer precompile we'll add it here. For now, this is a placeholder to show how precompiles would be added.
     }
+
+    pub fn into_inner(self) -> EvEvmFactory<EthEvmFactory> {
+        self.inner
+    }
 }
 
 impl EvmFactory for NobleEvmFactory {
