@@ -1,5 +1,5 @@
 //! Helper for building Noble node components.
-//! 
+//!
 //! This constructs a `ComponentsBuilder` configured with Noble's custom
 //! executor and payload builder, ensuring Noble's precompiles and payload
 //! logic are used throughout the node. This is required because the type system requires

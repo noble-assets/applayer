@@ -1,5 +1,5 @@
 //! Noble EVM factory that extends EvEvmFactory with Noble-specific configuration.
-//! 
+//!
 //! Wraps ev-reth's factory to inject custom precompiles.
 
 use alloy_evm::{
